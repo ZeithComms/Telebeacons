@@ -161,24 +161,23 @@ public class TileTransceiver
 				{
 					if(nowOpen == 14)
 					{
-						List<ServerPlayerEntity> sent = new ArrayList<>();
+						SPlaySoundEffectPacket pkt = new SPlaySoundEffectPacket(Flash.FLASH, SoundCategory.BLOCKS, worldPosition.getX(), worldPosition.getY(), worldPosition.getZ(), 1F, 1F);
 
 						for(ServerPlayerEntity spe : level.getEntitiesOfClass(ServerPlayerEntity.class, aabb.inflate(32)))
 							if(!targetEntities.contains(spe))
 							{
 								Network.sendTo(new PacketStartFlash(worldPosition), spe);
-								Network.sendTo(new PacketPlayPositionlessSound(Flash.FLASH, SoundCategory.BLOCKS, 1F), spe);
-								sent.add(spe);
+								spe.connection.send(pkt);
 							}
 
 						AxisAlignedBB aabb2 = BlockTransceiver.getTeleportationBounds(level, dst);
+						pkt = new SPlaySoundEffectPacket(Flash.FLASH, SoundCategory.BLOCKS, dst.getX(), dst.getY(), dst.getZ(), 1F, 1F);
 
 						for(ServerPlayerEntity spe : level.getEntitiesOfClass(ServerPlayerEntity.class, aabb2.inflate(32)))
 							if(!targetEntities.contains(spe))
 							{
 								Network.sendTo(new PacketStartFlash(dst), spe);
-								if(!sent.contains(spe))
-									Network.sendTo(new PacketPlayPositionlessSound(Flash.FLASH, SoundCategory.BLOCKS, 1F), spe);
+								spe.connection.send(pkt);
 							}
 
 						targetEntities.forEach(Flash::tpFlash);
@@ -196,7 +195,7 @@ public class TileTransceiver
 							float dstFloor = BlockTransceiver.getTeleportationFloor(level, dst);
 
 							Vector3d center = aabb.getCenter();
-							SPlaySoundEffectPacket pkt = new SPlaySoundEffectPacket(BlockTransceiver.WHOOSH, SoundCategory.BLOCKS, center.x, center.y, center.z, 2F, 1F);
+							SPlaySoundEffectPacket pkt = new SPlaySoundEffectPacket(BlockTransceiver.WHOOSH, SoundCategory.BLOCKS, center.x, center.y, center.z, 1F, 1F);
 
 							for(ServerPlayerEntity spe : level.getEntitiesOfClass(ServerPlayerEntity.class, aabb.inflate(32)))
 								if(!targetEntities.contains(spe))
@@ -220,7 +219,7 @@ public class TileTransceiver
 
 							aabb = BlockTransceiver.getTeleportationBounds(level, dst);
 							center = aabb.getCenter();
-							pkt = new SPlaySoundEffectPacket(BlockTransceiver.WHOOSH, SoundCategory.BLOCKS, center.x, center.y, center.z, 2F, 1F);
+							pkt = new SPlaySoundEffectPacket(BlockTransceiver.WHOOSH, SoundCategory.BLOCKS, center.x, center.y, center.z, 1F, 1F);
 
 							for(ServerPlayerEntity spe : level.getEntitiesOfClass(ServerPlayerEntity.class, aabb.inflate(32)))
 								if(!targetEntities.contains(spe))
