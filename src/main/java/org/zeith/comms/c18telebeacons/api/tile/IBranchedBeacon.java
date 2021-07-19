@@ -13,6 +13,8 @@ public interface IBranchedBeacon
 {
 	boolean hasBranchedBeam();
 
+	int getBranchedBeaconLevel();
+
 	default BeaconTileEntity asBeacon()
 	{
 		return (BeaconTileEntity) this;

@@ -2,7 +2,7 @@
 mod_id=telebeacons
 archive_name=Telebeacons
 mod_name=Telebeacons
-mod_version=16.1.2
+mod_version=16.1.4
 
 # Maven Info
 maven_group=org.zeith.comms.c18telebeacons
