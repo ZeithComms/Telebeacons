@@ -1,0 +1,6 @@
+# Telebeacons english translation
+
+itemGroup.telebeacons=Telebeacons
+
+block.telebeacons.redirector=Beacon Beam Redirector
+block.telebeacons.transceiver=Beacon Beam Transceiver

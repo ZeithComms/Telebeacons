@@ -1,0 +1,5 @@
+{
+	"whoosh": { "sounds": [ "telebeacons:whoosh_1", "telebeacons:whoosh_2" ] },
+	"flash": { "sounds": [ "telebeacons:flash_1", "telebeacons:flash_2" ] },
+	"transceiver_ambience": { "sounds": [ "telebeacons:transceiver_ambience" ] }
+}

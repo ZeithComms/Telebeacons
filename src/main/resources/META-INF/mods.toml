@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+issueTrackerURL="https://gitlab.com/DragonForge/<NAME>/issues"
+license="All rights reserved"
+[[mods]]
+modId="telebeacons"
+version="${file.jarVersion}"
+displayName="Telebeacons"
+updateJSONURL="http://dccg.herokuapp.com/api/fmluc/<CFID>"
+displayURL="http://dccg.herokuapp.com/api/fmlhp/<CFID>"
+logoFile="telebeacons.png" #optional
+credits="Zeitheron, Violet" #optional
+authors="Zeitheron" #optional
+description='''
+Multi-line description
+of the mod!
+'''
+[[dependencies.telebeacons]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE" # NONE/BEFORE/AFTER
+    side="BOTH"
+[[dependencies.telebeacons]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.telebeacons]]
+    modId="hammerlib"
+    mandatory=true
+    versionRange="[16,)"
+    ordering="NONE"
+    side="BOTH"

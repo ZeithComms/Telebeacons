@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "up": "telebeacons:block/redirector_open",
+    "down": "telebeacons:block/redirector_open",
+    "north": "telebeacons:block/redirector_closed",
+    "east": "telebeacons:block/redirector_closed",
+    "south": "telebeacons:block/redirector_closed",
+    "west": "telebeacons:block/redirector_closed"
+  }
+}

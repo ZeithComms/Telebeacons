@@ -1,0 +1,17 @@
+{
+	"required": true,
+	"minVersion": "0.8.1",
+	"package": "org.zeith.comms.c18telebeacons.mixins",
+	"refmap": "mixins.telebeacons.refmap.json",
+	"target": "@env(DEFAULT)",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+		"BeaconTileEntityMixin",
+		"EntityMixin"
+	],
+	"client": [
+		"client.ModelBakeryMixin"
+	],
+	"server": [
+	]
+}

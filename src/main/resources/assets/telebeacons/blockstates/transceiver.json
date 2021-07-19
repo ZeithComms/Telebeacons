@@ -1,0 +1,30 @@
+{
+	"variants": {
+		"facing=down": {
+			"model": "telebeacons:block/transceiver",
+			"x": 180
+		},
+		"facing=up": {
+			"model": "telebeacons:block/transceiver"
+		},
+		"facing=north": {
+			"model": "telebeacons:block/transceiver",
+			"x": 90
+		},
+		"facing=south": {
+			"model": "telebeacons:block/transceiver",
+			"x": 90,
+			"y": 180
+		},
+		"facing=west": {
+			"model": "telebeacons:block/transceiver",
+			"x": 90,
+			"y": 270
+		},
+		"facing=east": {
+			"model": "telebeacons:block/transceiver",
+			"x": 90,
+			"y": 90
+		}
+	}
+}
