@@ -1,19 +1,17 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-issueTrackerURL="https://gitlab.com/DragonForge/<NAME>/issues"
+issueTrackerURL="https://github.com/ZeithComms/Telebeacons/issues"
 license="All rights reserved"
 [[mods]]
 modId="telebeacons"
 version="${file.jarVersion}"
 displayName="Telebeacons"
-updateJSONURL="http://dccg.herokuapp.com/api/fmluc/<CFID>"
-displayURL="http://dccg.herokuapp.com/api/fmlhp/<CFID>"
-logoFile="telebeacons.png" #optional
-credits="Zeitheron, Violet" #optional
+updateJSONURL="http://dccg.herokuapp.com/api/fmluc/506427"
+displayURL="http://dccg.herokuapp.com/api/fmlhp/506427"
+credits="Violet for commissioning the mod!" #optional
 authors="Zeitheron" #optional
 description='''
-Multi-line description
-of the mod!
+Beacon-based teleportation network in Minecraft!
 '''
 [[dependencies.telebeacons]]
     modId="forge"
@@ -30,6 +28,6 @@ of the mod!
 [[dependencies.telebeacons]]
     modId="hammerlib"
     mandatory=true
-    versionRange="[16,)"
+    versionRange="[16.3,)"
     ordering="NONE"
     side="BOTH"
